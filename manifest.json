@@ -2,23 +2,14 @@
   "manifest_version": 3,
   "name": "Squint",
   "description": "Blur and desaturate your webpage to see how well the design holds up. A tool for web designers and developers.",
-  "version": "0.20",
+  "version": "1.0",
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
+    "default_popup": "squint.html",
+    "default_icon": "icons/squint-16.png"
   },
   "permissions": ["scripting", "tabs"],
   "host_permissions": [
     "https://*/",
     "http://*/"
-  ],
-  "content_scripts": [
-    {
-      "js": ["scripts/content.js"],
-      "matches": [
-        "https://*/",
-        "http://*/"
-      ]
-    }
   ]
 }

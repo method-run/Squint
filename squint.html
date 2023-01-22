@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <style>
+      html {
+        font-size: 16px;
+        width: 200px;
+        height: 220px;
+        background: white;
+        color: #16161f;
+        box-sizing: border-box;
+        padding: 16px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .controlGroup {
+        margin-bottom: 1rem;
+      }
+      input {
+        width: 100%;
+      }
+      .preview {
+        padding: 0.25rem;
+        text-align: center;
+      }
+      button {
+        transition: background-color 200ms linear, color 200ms linear, border-color 200ms linear;
+        appearance: none;
+        background: #0439BF;
+        border-radius: 0.5rem;
+        border: 1px solid #0439BF;
+        color: #ffffff;
+        font: sans-serif;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 #6ED1D088;
+        padding: 0.25rem 0.75rem;
+      }
+      button:hover, button:focus {
+        border-color: #B13C99;
+        background-color: #B13C99;
+      }
+      button:active {
+        background: #B13C99;
+        border-color: #B13C99;
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: #16161f;
+          color: white;
+        }
+      }
+    </style>
+    <style id="style">
+      .preview {
+        -webkit-filter: grayscale(50%) blur(5px) !important; /* Safari 6.0 - 9.0 */
+        filter: grayscale(50%) blur(5px) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controlGroup">
+      <label for="grayScaleRange">De-colorize</label>
+      <br/>
+      <input value="50" type="range" id="grayScaleRange" min="0" max="100" step="1" />
+    </div>
+    <div class="controlGroup">
+      <label for="blurRange">Blur</label>
+      <br/>
+      <input value="5" type="range" id="blurRange" min="0" max="10" step="1" />
+    </div>
+    <div class="controlGroup">
+      <span>Preview</span>
+      <br/>
+      <div class="preview">
+        <img src="icons/squint-32.png" alt="A pixelated eye in blue and purple shades." />
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="resetButton" type="button">Reset</button>
+      <button id="applyButton" type="button">Squint</button>
+    </div>
+    <script src="squint.js"></script>
+  </body>
+</html>

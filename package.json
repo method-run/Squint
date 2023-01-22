@@ -1,8 +1,8 @@
 {
   "name": "squint",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Blur and desaturate your webpage to see how well the design holds up. A tool for web designers and developers.",
-  "main": "popup.js",
+  "main": "squint.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
